@@ -17,6 +17,5 @@ Branch for fixing non-hotfix bugs
 Branch for fixing serious bugs in main branch
 ## Pull Request
 When making a pull request, please describe what the pull request is about and how the reviewer can verify that it works.  
-If you find after submitting a PR that it cannot be merged because it needs to be corrected, add [WIP] to the title of the PR and remove [WIP] from the title as soon as the correction is complete.
 ## Coding Rule
 Please refer to the coding rules in the [ROS developer's guide](http://wiki.ros.org/DevelopersGuide)
