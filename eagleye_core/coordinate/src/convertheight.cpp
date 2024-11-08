@@ -48,7 +48,7 @@ double ConvertHeight::convert2altitude()
     GeographicLib::Geoid egm2008("egm2008-1");
     converted_height = egm2008.ConvertHeight(_latitude, _longitude, _height, GeographicLib::Geoid::ELLIPSOIDTOGEOID);
   }
-  catch (const GeographicLib::GeographicErr err)
+  catch (const GeographicLib::GeographicErr& err)
   {
     std::cerr << "\033[31;1mError: Failed to convert height from Ellipsoid to Altitude. " << err.what() << std::endl;
     exit(4);
@@ -64,7 +64,7 @@ double ConvertHeight::convert2ellipsoid()
     GeographicLib::Geoid egm2008("egm2008-1");
     converted_height = egm2008.ConvertHeight(_latitude, _longitude, _height, GeographicLib::Geoid::GEOIDTOELLIPSOID);
   }
-  catch (const GeographicLib::GeographicErr err)
+  catch (const GeographicLib::GeographicErr& err)
   {
     std::cerr << "\033[31;1mError: Failed to convert height from Ellipsoid to Altitude. " << err.what() << std::endl;
     exit(4);
